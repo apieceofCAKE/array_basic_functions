@@ -28,7 +28,7 @@ int main() {
     size --;
     int array[size];
 
-    for(int aux1 = 0; aux1 <= size; aux1 ++) {
+    for (int aux1 = 0; aux1 <= size; aux1 ++) {
 
         printf("\nEnter the value for the element %d: \n", aux1);
         scanf("%d", &array[aux1]);
@@ -36,7 +36,7 @@ int main() {
 
     printf("\n\nYou entered: \n");
 
-    for(int aux2 = 0; aux2 <= size; aux2 ++) {
+    for (int aux2 = 0; aux2 <= size; aux2 ++) {
 
         printf("%d ", array[aux2]);
     }
@@ -44,7 +44,7 @@ int main() {
     printf("\n\nLet's check this array mode...\n");
     int mode = array_mode(array, size);
 
-    if(mode == 1) {
+    if (mode == 1) {
 
         printf("\nThe mode could be any element...\n");
     }
@@ -73,20 +73,20 @@ int array_mode(int *array, int size) {
     int count;
     int max_count = 0;
 
-    for(int aux1 = 0; aux1 <= size; aux1 ++) {
+    for (int aux1 = 0; aux1 <= size; aux1 ++) {
 
         count = 0;
         element = array[aux1];
 
-        for(int aux2 = 0; aux2 <= size; aux2 ++) {
+        for (int aux2 = 0; aux2 <= size; aux2 ++) {
 
-            if(array[aux2] == element) {
+            if (array[aux2] == element) {
 
                 count++;
             }
         }
 
-        if(count >= max_count) {
+        if (count >= max_count) {
 
             //With some work we can also retrieve max_count to show to the user
             max_count = count;
@@ -101,11 +101,11 @@ int array_mode(int *array, int size) {
 void array_sort(int *array, int size) {
 //Sorts the array in increasing order
 
-    for(int aux1 = 0; aux1 <= size; aux1 ++) {
+    for (int aux1 = 0; aux1 <= size; aux1 ++) {
 
-        for(int aux2 = 0; aux2 <= size; aux2 ++) {
+        for (int aux2 = 0; aux2 <= size; aux2 ++) {
 
-            if(array[aux2] > array[aux1]) {
+            if (array[aux2] > array[aux1]) {
 
                 int temp = array[aux1];
                 array[aux1] = array[aux2];
@@ -128,7 +128,7 @@ float array_median(int *array, int size) {
     float median;;
     size ++;
 
-    if(size % 2 == 0) {
+    if (size % 2 == 0) {
 
         size = size/2;
         float a = array[size];
@@ -151,7 +151,7 @@ float array_mean(int *array, float size) {
     float total = 0;
     float mean;
 
-    for(int aux1 = 0; aux1 <= size; aux1 ++) {
+    for (int aux1 = 0; aux1 <= size; aux1 ++) {
 
         total = total + array[aux1];
     }
